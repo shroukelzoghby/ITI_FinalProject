@@ -1,7 +1,7 @@
 <p
     align="center"
     style="text-align: center">
-    <img src="./resources/images/logo/icon.png" style="width: 600px;">
+    <img src="./resources/images/logo/icon.svg" style="width: 600px;">
 </p>
 
 <h1 style="text-align: center;">ITI-Summer Training Project</h1>
