@@ -6,7 +6,7 @@
 
 <h1 style="text-align: center;">ITI-Summer Training Project</h1>
 
-##  Online library Management System:
+
 
 ###  Two Modules:
 ####  Admin Module Features
