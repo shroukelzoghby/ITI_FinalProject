@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Antic Didone';
+    src: url('AnticDidone-Regular.woff2') format('woff2'),
+        url('AnticDidone-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DM Serif Text';
+    src: url('DMSerifText-Regular.woff2') format('woff2'),
+        url('DMSerifText-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

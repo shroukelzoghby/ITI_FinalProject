@@ -1,0 +1,46 @@
+.book
+{
+    padding-bottom: 30px;
+    border-bottom: 2px groove #0007;
+}
+
+.book__cover
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @at-root #{&}__container
+    {
+        @include flex-center;
+
+        width: 150px;
+        height: 150px;
+        padding: 10px;
+    }
+}
+
+.book__info
+{
+    align-self: flex-end;
+}
+
+.book__title
+{
+    font: {
+        size: 30px;
+        weight: bold;
+    };
+}
+
+
+
+.book__describtion
+{
+    font: {
+        family: "Antic Didone";
+    }
+}
+
+
+

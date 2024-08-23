@@ -1,0 +1,46 @@
+@use "variables" as *;
+
+.button
+{
+    width: fit-content;
+    min-width: 120px;
+    padding: 13px;
+    border: none;
+    border-radius: $main-border-radius;
+    color: whitesmoke;
+    background-color: $main-color;
+    cursor: pointer;
+    transition: background-color 200ms ease;
+
+    font: {
+        size: 18px;
+        weight: bold;
+    }
+
+    &:hover
+    {
+        color: white;
+        background-color: rgba($main-color, 0.93);
+    }
+
+    @at-root #{&}--green
+    {
+        background-color: $color-green;
+
+        &:hover
+        {
+            background-color: rgba($color-green, 0.93);
+        }
+    }
+
+    @at-root #{&}--red
+    {
+        background-color: $color-red;
+
+        &:hover
+        {
+            background-color: rgba($color-red, 0.93);
+        }
+    }
+}
+

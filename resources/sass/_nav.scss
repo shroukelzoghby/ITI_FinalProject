@@ -1,0 +1,63 @@
+@use "variables" as *;
+@use "framework" as *;
+
+.nav
+{
+    @include flex-center;
+
+    padding: 25px 25px 0 25px;
+    margin-bottom: 70px;
+
+    @at-root #{&}__a
+    {
+        margin-left: 13px;
+        color: $main-color;
+        font-size: $font-s2;
+        text-decoration: none;
+
+        &:hover
+        {
+            color: $color-primary;
+        }
+
+        @at-root #{&}--small
+        {
+            @extend .nav__a;
+
+            font-size: $font-s5;
+        }
+
+        @at-root #{&}--active
+        {
+            @extend .nav__a;
+
+            color: $color-secondary;
+
+            &:hover
+            {
+                color: $color-secondary;
+            }
+        }
+    }
+
+    @at-root #{&}__elem--ceil
+    {
+        align-self: flex-start;
+    }
+
+    @at-root #{&}__elem--floor
+    {
+        align-self: flex-end;
+    }
+
+    @at-root #{&}__right
+    {
+        margin-left: auto;
+    }
+
+    @at-root #{&}__left
+    {
+        margin-right: auto;
+    }
+}
+

@@ -1,0 +1,44 @@
+@use "variables" as *;
+
+.input
+{
+    width: 350px;
+    padding: 7px;
+    color: $main-color;
+    background-color: transparent;
+    font: {
+        size: $font-s4;
+        weight: bold;
+    }
+    outline: none;
+    border: 2px solid $color-secondary;
+    border-radius: $main-border-radius;
+
+    &:focus,
+    &:focus-within
+    {
+        border: 2px solid $main-color;
+    }
+
+    &::placeholder
+    {
+        color: #333B;
+    }
+
+    &[disabled]
+    {
+        color: #777;
+    }
+
+    @at-root #{&}--text-area
+    {
+        height: 120px;
+    }
+}
+
+.label
+{
+    color: $color-anchor;
+    font-size: 23px;
+}
+

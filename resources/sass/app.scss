@@ -1,0 +1,194 @@
+// Variables
+@use "variables" as *;
+
+// Framework
+@import "framework";
+
+// Table
+@import "table";
+
+// Hx e.g. h1, h2, h3, etc...
+@import "h";
+
+// Buttons
+@import "button";
+
+// Input
+@import "input";
+
+// Nav
+@import "nav";
+
+// User Components
+@import "user";
+
+// Resources
+@import "resources";
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    @include flex-column;
+    min-height: 100vh;
+    color: #333;
+
+    font: {
+        family: $font-primary;
+        weight: normal;
+        style: normal;
+    }
+}
+
+a
+{
+    width: fit-content;
+}
+
+// Focus Effect
+$focusable: 'a', 'input', 'button', 'textarea', 'select';
+
+@each $element in $focusable
+{
+    #{$element}
+    {
+        outline: none;
+    }
+
+    #{$element}:focus-visible
+    {
+        border: 2px solid $main-color;
+    }
+}
+
+.logo
+{
+    width: 350px;
+}
+
+#app
+{
+    width: 90%;
+    margin-inline: auto;
+    flex: 1;
+}
+
+.footer
+{
+    padding: 5px;
+    margin-top: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+.wood-word
+{
+    @include background-as-color;
+
+    background-image: url('../images/backgrounds/background.png');
+}
+
+.landing-book-poster
+{
+    width: 100%;
+}
+
+.a
+{
+    color: $color-anchor;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover
+    {
+        color: rgba($color-anchor, 0.93);
+    }
+
+    @at-root #{&}--red
+    {
+        @extend .a;
+
+        color: $color-anchor-red;
+
+        &:hover
+        {
+            color: rgba($color-anchor-red, 0.8);
+        }
+    }
+
+    @at-root #{&}--red-danger
+    {
+        @extend .a;
+
+        color: $color-red;
+
+        &:hover
+        {
+            color: rgba($color-red, 0.8);
+        }
+    }
+
+    @at-root #{&}--green
+    {
+        @extend .a;
+
+        color: $color-anchor-green;
+
+        &:hover
+        {
+            color: rgba($color-anchor-green, 0.94);
+        }
+    }
+
+    @at-root #{&}--blue
+    {
+        @extend .a;
+
+        color: $color-anchor-blue;
+
+        &:hover
+        {
+            color: rgba($color-anchor-blue, 0.94);
+        }
+    }
+
+    @at-root #{&}--small
+    {
+        @extend .a;
+
+        font-size: $font-s5;
+    }
+
+    @at-root #{&}--tag
+    {
+        @extend .a;
+
+        padding: 5px;
+        border-radius: 6px;
+        color: rgba($main-color, 0.55);
+        background-color: rgba($color-primary, 0.25);
+
+        &:hover
+        {
+            color: rgba($main-color, 0.55);
+        }
+    }
+
+    @at-root #{&}--text
+    {
+        @extend .a;
+
+        color: inherit;
+
+        &:hover
+        {
+            color: inherit;
+        }
+    }
+}
+

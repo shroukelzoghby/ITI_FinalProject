@@ -1,0 +1,88 @@
+@use "variables" as *;
+
+.table
+{
+    width: max-content;
+    border-collapse: collapse;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+
+    @at-root #{&}__container
+    {
+        width: 100%;
+        overflow-x: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @at-root #{&}__aux
+        {
+            width: max-content;
+            overflow: auto;
+        }
+    }
+
+    @at-root #{&}__tr
+    {
+        background-color: #D0B8A8;
+
+        @at-root #{&}--head
+        {
+            background-color: #F8EDE3;
+        }
+    }
+
+    @at-root #{&}__td
+    {
+        width: max-content;
+        min-width: 36px;
+        min-height: 45px;
+        padding-block: 10px;
+        padding-left: 16px;
+        padding-right: 19px;
+        border-bottom: 1px solid #F8EDE3;
+        color: $main-color;
+        font-size: $font-s4;
+        font-weight: 500;
+
+        &:not(:first-child):not(#{&}--no_border)
+        {
+            border-left: 2px solid #C5705D
+        }
+
+        @at-root #{&}--head
+        {
+            border-bottom: 1px solid $main-color
+        }
+
+        @at-root #{&}--text_center
+        {
+            text-align: center;
+        }
+    }
+
+    @media (min-width: 300px)
+    {
+        @at-root #{&}--250px
+        {
+            width: 250px;
+        }
+    }
+
+    @media (min-width: 700px)
+    {
+        @at-root #{&}--500px
+        {
+            width: 500px;
+        }
+    }
+
+    @media (min-width: 1200px)
+    {
+        @at-root #{&}--1000px
+        {
+            width: 1000px;
+        }
+    }
+}
+
